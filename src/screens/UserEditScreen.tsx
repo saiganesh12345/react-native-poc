@@ -72,7 +72,7 @@ const UserEditScreen = ({ route }: any) => {
 
     const [cities, setCities] = useState([
         { label: 'Hyderabad', value: 'HYD', id: 'C01' },
-        { label: 'Khammam', value: 'KMM', id: 'C02' }, 
+        { label: 'Khammam', value: 'KMM', id: 'C02' },
     ]);
 
 
