@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View, TextInput, ScrollView, Button, SafeAreaView } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
-import { addUserApiCall } from '../services/userAddApiService';
+import { editUserApiCall } from '../services/userEditApiServicee';
 import { userListSelectors } from '../store/Users';
 
 import CheckBox from '@react-native-community/checkbox';
@@ -172,7 +172,7 @@ const UserEditScreen = ({ route }: any) => {
             form.languages = payloadLangs;
 
             console.log("======== FORM DATA ============ >>>> ", JSON.stringify(form, null, 2))
-        // dispatch(addUserApiCall(form, navigation))
+        // dispatch(editUserApiCall(form, navigation))
 
         } else {
 

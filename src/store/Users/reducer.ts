@@ -37,7 +37,16 @@ export default (
                 ...state,
                 usersListData: {
                     ...state.usersListData,
-                    data: [],
+                    loader: action.payload.loader,
+                    error: action.payload.error,
+                },
+            };
+
+        case ADD_USER:
+            return {
+                ...state,
+                usersListData: {
+                    ...state.usersListData,
                     loader: action.payload.loader,
                     error: action.payload.error,
                 },

@@ -4,7 +4,8 @@ import {
     GET_ALL_USERS,
     GET_USER_BY_ID,
     DELETE_USER_BY_ID,
-    UPDATE_USER
+    UPDATE_USER,
+    ADD_USER
 } from './actionTypes';
 
 interface GetAllUsers {
@@ -27,9 +28,15 @@ interface updateUser {
     payload: any;
 }
 
+interface addUser {
+    type: typeof ADD_USER;
+    payload: any;
+}
+
 
 export type UserServicesActionTypes =
     | GetAllUsers
     | GetUserById
     | DeleteUserById
     | updateUser
+    | addUser

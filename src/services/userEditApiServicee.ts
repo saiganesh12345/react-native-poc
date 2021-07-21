@@ -7,14 +7,13 @@ export function editUserApiCall(userData: any, navigation: any) {
     return (dispatch: any) => {
 
 
-        // dispatch({
-        //     type: GET_ALL_USERS,
-        //     payload: {
-        //         data: null,
-        //         loader: true,
-        //         error: null,
-        //     },
-        // });
+        dispatch({
+            type: UPDATE_USER,
+            payload: {
+                loader: true,
+                error: null,
+            },
+        });
 
         let payLoad = {
             body: JSON.stringify(userData),
@@ -33,6 +32,15 @@ export function editUserApiCall(userData: any, navigation: any) {
                 console.log('====== RES DATA', JSON.stringify(response.data, null, 2));
 
                 if (response.status === 200) {
+
+                    dispatch({
+                        type: UPDATE_USER,
+                        payload: {
+                            loader: false,
+                            error: null,
+                        },
+                    });
+
                     navigation.navigate('UsersList')
                 }
             })
